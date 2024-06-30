@@ -1,0 +1,2 @@
+create a file just.txt; rename a file just.txt to hello.txt; insert to a file hello.txt content: helo guys i'm from commands;
+insert to a file hello.txt content: just another;
