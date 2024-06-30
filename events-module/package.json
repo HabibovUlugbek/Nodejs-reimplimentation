@@ -1,0 +1,16 @@
+{
+  "name": "event-emitter",
+  "version": "1.0.0",
+  "description": "Recreating event module in Nodejs",
+  "main": "event-emitter.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "Nodejs",
+    "events",
+    "event-emitter"
+  ],
+  "author": "Habibov Ulug`bek",
+  "license": "ISC"
+}
