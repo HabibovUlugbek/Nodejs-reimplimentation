@@ -1,6 +1,6 @@
 # Node.js Modules Reimplementation
 
-This repository aims to provide reimplementation of popular Node.js modules, showcasing how they can be used with real examples. In this repo, we will cover the reimplementation of two modules: `event` and `fs`.
+This repository aims to provide reimplementation of popular Node.js modules, showcasing how they can be used with real examples. In this repo, we will cover the reimplementation of modules: `event` and `fs` and also you can see usage of buffer.
 
 ## Event Module Reimplementation
 
@@ -13,8 +13,6 @@ The `event` module is a core module in Node.js that allows you to create and han
 Feel free to explore the reimplementation and customize it according to your needs.
 
 For more information on the `event` module reimplementation, please refer to the [README](./events-module/README.md) in the `events-module` folder.
-
-## FS Module Usage: File Commander
 
 ## FS Module Usage: File Commander
 
