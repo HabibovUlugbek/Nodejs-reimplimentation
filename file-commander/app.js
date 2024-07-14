@@ -53,7 +53,7 @@ const fs = require("node:fs/promises");
     const Commands = {
       CREATE_FILE: "create a file", // create a file <path>
       DELETE_FILE: "delete a file", // delete a file <path>
-      RENAME_FILE: "rename a file ", // rename a file <path> to <path>
+      RENAME_FILE: "rename a file", // rename a file <path> to <path>
       INSERT_TO_FILE: "insert to a file", // insert to a file <path> content: <content>
     };
 
