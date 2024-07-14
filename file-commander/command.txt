@@ -1,1 +1,1 @@
-rename a file just.txt to hello.txt; delete a file hello.txt; create a file just.txt;
+  rename a file just.txt to just2.txt; delete a file just2.txt
