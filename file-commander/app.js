@@ -1,5 +1,11 @@
 const fs = require("node:fs/promises");
 
+console.log("File Commander is running...");
+console.log("Listening for commands in command.txt file");
+console.log(
+  "Available commands: create a file, delete a file, rename a file, insert to a file"
+);
+
 (async () => {
   try {
     const createFile = async (path) => {
@@ -18,9 +24,12 @@ const fs = require("node:fs/promises");
     const deleteFile = async (path) => {
       try {
         await fs.unlink(path);
-      } catch (error) {
+        console.log(`The file ${path} was deleted`);
+      } catch (err) {
         if (err.code === "ENOENT") {
-          console.log(`The file ${oldPath} doesn't exists`);
+          console.log(`The file ${path} doesn't exists`);
+        } else {
+          console.log(err);
         }
       }
     };
@@ -28,12 +37,15 @@ const fs = require("node:fs/promises");
     const renameFile = async (oldPath, newPath) => {
       try {
         await fs.rename(oldPath, newPath);
+        console.log(`The file ${oldPath} was renamed to ${newPath}`);
       } catch (err) {
         if (err)
           if (err.code === "ENOENT") {
             console.log(
               `The file ${oldPath} doesn't exists or ${newPath} file already exists`
             );
+          } else {
+            console.log(err);
           }
       }
     };
@@ -43,8 +55,13 @@ const fs = require("node:fs/promises");
         const existingFile = await fs.open(path, "a");
         existingFile.write(content);
         existingFile.close();
+        console.log(`Content inserted to ${path}`);
       } catch (err) {
-        console.log(`The file ${path} doesn't exists`);
+        if (err.code === "ENOENT") {
+          console.log(`The file ${path} doesn't exists`);
+        } else {
+          console.log(err);
+        }
       }
     };
 
@@ -69,6 +86,7 @@ const fs = require("node:fs/promises");
 
       const commands = buff.toString().split(";");
       for (let command of commands) {
+        if (!command.trim()) continue;
         if (command.includes(Commands.CREATE_FILE)) {
           const start =
             command.indexOf(Commands.CREATE_FILE) + Commands.CREATE_FILE.length;
