@@ -6,10 +6,6 @@ This repository aims to provide reimplementation of popular Node.js modules, sho
 
 The `event` module is a core module in Node.js that allows you to create and handle custom events. In this reimplementation, we have created a simplified version of the `event` module.
 
-## Event Module Reimplementation
-
-The `event` module is a core module in Node.js that allows you to create and handle custom events. In this reimplementation, we have created a simplified version of the `event` module.
-
 Feel free to explore the reimplementation and customize it according to your needs.
 
 For more information on the `event` module reimplementation, please refer to the [README](./events-module/README.md) in the `events-module` folder.
