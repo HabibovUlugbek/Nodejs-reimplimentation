@@ -1,10 +1,10 @@
 # Node.js Modules Reimplementation
 
-This repository aims to provide reimplementation of popular Node.js modules, showcasing how they can be used with real examples. In this repo, we will cover the reimplementation of modules: `event` and `fs` and also you can see usage of `buffer` and `streams`.
+This repository aims to provide reimplementation of popular Node.js modules, showcasing how they can be used with real examples. In this repo, I will cover the reimplementation of modules: `event` and `fs` and also you can see usage of `buffer` and `streams`.
 
 ## Event Module Reimplementation
 
-The `event` module is a core module in Node.js that allows you to create and handle custom events. In this reimplementation, we have created a simplified version of the `event` module.
+The `event` module is a core module in Node.js that allows you to create and handle custom events. In this reimplementation, I have created a simplified version of the `event` module.
 
 Feel free to explore the reimplementation and customize it according to your needs.
 
@@ -12,7 +12,7 @@ For more information on the `event` module reimplementation, please refer to the
 
 ## FS Module Usage: File Commander
 
-The `fs` module is a core module in Node.js that provides an API for interacting with the file system. In this repository, we have implemented a file commander application that demonstrates various use cases of the `fs` module.
+The `fs` module is a core module in Node.js that provides an API for interacting with the file system. In this repository, I have implemented a file commander application that demonstrates various use cases of the `fs` module.
 
 The file commander allows you to perform operations such as creating, reading, updating, and deleting files and directories. It also provides functionality for renaming files.
 
@@ -24,7 +24,7 @@ For more information on the file commander and its usage with the `fs` module, p
 
 Streams are a powerful feature in Node.js that allow you to efficiently process and manipulate data. They provide a way to read or write data in chunks, rather than loading the entire data into memory.
 
-In this repository, we also cover the usage of streams. You can find examples and explanations on how to work with streams in the [README](./streams/README.md) in the `streams` folder. We provide examples of working with streams, including benchmarking and a custom stream implementation.
+In this repository, I also cover the usage of streams. You can find examples and explanations on how to work with streams in the [README](./streams/README.md) in the `streams` folder. I provide examples of working with streams, including benchmarking and a custom stream implementation.
 
 Feel free to explore the examples and learn how to leverage streams in your Node.js projects.
 
@@ -44,4 +44,4 @@ I will be sharing more insights and updates on the reimplementation of Node.js m
 
 If you have any questions or feedback, feel free to reach out to me on LinkedIn or Medium.
 
-We hope you find these resources helpful in understanding and exploring the reimplementation of these modules. Happy coding!
+I hope you find these resources helpful in understanding and exploring the reimplementation of these modules. Happy coding!
