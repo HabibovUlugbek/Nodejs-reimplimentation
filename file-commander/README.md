@@ -9,7 +9,7 @@ The File Commander project demonstrates how to use the `fs` module in Node.js to
    Example `commands.txt` file:
 
    ```
-   CREATE newfile.txt;RENAME oldfile.txt newfile.txt;COPY source/file.txt destination/file.txt;DELETE oldfile.txt
+   create a file newfile.txt;rename a file oldfile.txt to newfile.txt;delete a file oldfile.txt
    ```
 
 2. Run the `app.js` script using Node.js.
@@ -30,7 +30,7 @@ The command syntax for the command text file is as follows:
 Suppose you have the following `commands.txt` file:
 
 ```
-CREATE newfile.txt;RENAME oldfile.txt newfile.txt;DELETE oldfile.txt
+create a file newfile.txt;rename a file oldfile.txt to newfile.txt;delete a file oldfile.txt
 ```
 
 Running the `app.js` script will create a new file named `newfile.txt`, rename `oldfile.txt` to `newfile.txt`, and delete `oldfile.txt`.
