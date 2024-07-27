@@ -1,13 +1,13 @@
 const fs = require("node:fs/promises");
 
-// Execution Time: 9.2s
-// Memory Usage: 50MB
+// Execution Time: 9.3s
+// Memory Usage: 50-60MB
 (async () => {
   console.time("fs promise solution");
-  const fileHandle = await fs.open("test.txt", "w");
+  const fileHandler = await fs.open("test.txt", "w");
 
-  for (let i = 0; i < 10000000; i++) {
-    await fileHandle.write(` ${i} `);
+  for (let i = 0; i < 1000000; i++) {
+    await fileHandler.write(` ${i} `);
   }
   console.timeEnd("fs promise solution");
 })();
