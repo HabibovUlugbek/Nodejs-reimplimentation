@@ -4,10 +4,15 @@ const fs = require("node:fs/promises");
 // Memory Usage: 50-60MB
 (async () => {
   console.time("fs promise solution");
-  const fileHandler = await fs.open("test.txt", "w");
+  try {
+    const fileHandler = await fs.open("test.txt", "w");
 
-  for (let i = 0; i < 1000000; i++) {
-    await fileHandler.write(` ${i} `);
+    for (let i = 0; i < 1000000; i++) {
+      await fileHandler.write(` ${i} `);
+    }
+  } catch (error) {
+    console.error("An error occurred:", error);
+  } finally {
+    console.timeEnd("fs promise solution");
   }
-  console.timeEnd("fs promise solution");
 })();

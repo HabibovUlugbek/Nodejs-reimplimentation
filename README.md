@@ -39,6 +39,7 @@ If you're interested in learning more about the reimplementation of the `event` 
 Article links:
 
 - About the buffer. [Buffer haqida bilib olamiz (Nodejs)](https://medium.com/@habibovulugbek/buffer-haqida-bilib-olamiz-nodejs-9e8193c387da)
+- About the streams. [Stream nima? Nodejsda streamlar bilan ishlash.](https://medium.com/@habibovulugbek/stream-nima-nodejsda-ortida-streamlar-qanday-ishlaydi-77256825ec51)
 
 I will be sharing more insights and updates on the reimplementation of Node.js modules, so stay tuned for more content.
 

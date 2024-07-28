@@ -6,6 +6,30 @@ Streams are a fundamental concept in Node.js that allow for efficient handling o
 
 To understand the performance characteristics of different stream implementations, we will conduct benchmarking tests. By comparing the speed and memory usage of various stream types, we can make informed decisions about which streams are best suited for specific use cases.
 
+## Benchmarking Stream Writing
+
+To benchmark stream writing from 1 to millions in a file, we can compare different solutions using various stream implementations. Here are five solutions to consider:
+
+1. **promise fs**: This solution utilizes the `fs/promises` module, which provides promise-based APIs for file operations. By leveraging promises, you can write numbers to a file in an asynchronous and non-blocking manner.
+
+2. **callback fs**: This solution uses the traditional callback-based APIs of the `fs` module. It allows you to write numbers to a file using callbacks, which can be useful in certain scenarios where callback-based programming is preferred.
+
+3. **synchronous fs**: This solution involves using synchronous file operations provided by the `fs` module. While synchronous operations can block the event loop, they can be simpler to work with in certain cases. You can benchmark the performance of writing numbers synchronously to a file.
+
+4. **naive stream solution**: This solution involves using a basic implementation of a writable stream to write numbers to a file. While this approach may not be the most efficient, it can serve as a starting point for understanding the fundamentals of stream writing.
+
+5. **better solution**: This solution involves using a more optimized and efficient implementation of a writable stream. By leveraging the power of Node.js stream APIs, you can improve the performance of writing numbers to a file.
+
+By benchmarking these different solutions, you can gain insights into their performance characteristics and make informed decisions about which approach is best suited for your specific use case.
+
+Remember to consider factors such as speed, memory usage, and scalability when evaluating the performance of each solution.
+
+You can see the implementation of these different stream solutions in the `stream-usage`folder of this repository. The folder contains separate files for each solution, showcasing the code and usage examples for benchmarking stream writing.
+
+Feel free to explore the code and experiment with different stream implementations to understand their performance characteristics and choose the best approach for your specific use case.
+
+Happy coding!
+
 ## Creating Custom Streams
 
 In addition to exploring built-in streams, we will also dive into creating our own custom streams. Custom streams provide flexibility and allow us to tailor the data processing to our specific needs. We will explore both readable and writable custom streams, leveraging the power of Node.js stream APIs.
