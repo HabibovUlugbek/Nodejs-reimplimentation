@@ -41,4 +41,3 @@ To demonstrate the practical application of streams, we will build an encrypt/de
 Stay tuned as we dive deeper into the world of streams and explore their vast potential in Node.js!
 
 For more information on streams in Node.js, please refer to the [official Node.js documentation](https://nodejs.org/api/stream.html).
-[]: # (END)
