@@ -50,7 +50,7 @@ So I have create a custom readable stream which gets a file path and reads and l
 
 A duplex stream combines the functionality of both readable and writable streams, allowing for bidirectional data flow. By extending the `Duplex` class from the Node.js `stream` module, we can create a custom duplex stream that processes data in both directions. This can be useful for tasks such as data transformation, protocol handling, or real-time communication.
 
-So I have create a custom duplex stream which gets a file path and reads and writes the data to other file. You can find the implementation in the `custom-duplex-stream` folder.
+So I have create a custom duplex stream which gets a file paths and reads and writes the data from files. You can find the implementation in the `custom-duplex-stream` folder.
 
 By creating custom streams, we can tailor the data processing to our specific needs and build powerful data pipelines that efficiently handle data in Node.js.
 
