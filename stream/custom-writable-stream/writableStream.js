@@ -1,7 +1,7 @@
 const { Writable } = require("node:stream");
 const fs = require("node:fs");
 
-class WriteStream extends Writable {
+class FileWritableStream extends Writable {
   constructor({ highWaterMark, fileName }) {
     super({ highWaterMark });
 
@@ -11,11 +11,12 @@ class WriteStream extends Writable {
     this.chunksSize = 0;
     this.writesCount = 0;
   }
+
   //it method runs after constructor and before starting write
   _construct(callback) {
     fs.open(this.fileName, "w", (err, fd) => {
       if (err) {
-        callback(err); //exits stream and gives a error
+        callback(err); // exits stream and gives a error
       } else {
         this.fileDescriptor = fd;
         //no arguments means it was succesful
@@ -70,10 +71,4 @@ class WriteStream extends Writable {
   }
 }
 
-const stream = new WriteStream({ highWaterMark: 1800, fileName: "just.txt" });
-stream.write(Buffer.from("hello"));
-stream.end(Buffer.from("Good bye"));
-
-stream.on("finish", () => {
-  console.log("finished");
-});
+module.exports = { FileWritableStream };

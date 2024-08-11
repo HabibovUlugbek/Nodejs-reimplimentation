@@ -34,6 +34,16 @@ Happy coding!
 
 In addition to exploring built-in streams, we will also dive into creating our own custom streams. Custom streams provide flexibility and allow us to tailor the data processing to our specific needs. We will explore both readable and writable custom streams, leveraging the power of Node.js stream APIs.
 
+### Writable Custom Stream
+
+A writable custom stream allows us to define how data is written to a destination. By extending the `Writable` class from the Node.js `stream` module, we can create a custom writable stream that processes data in a specific way. This can be useful for tasks such as logging, data transformation, or writing to a custom data store.
+
+So I have create a custom writable stream which gets a file path and writes the data to that file. You can find the implementation in the `custom-writable-stream` folder.
+
+### Readable Custom Stream
+
+A readable custom stream allows us to define how data is read from a source. By extending the `Readable` class from the Node.js `stream` module, we can create a custom readable stream that generates data in a specific way. This can be useful for tasks such as reading from a custom data source, generating data on-the-fly, or processing data before it is consumed.
+
 ## Encrypt/Decrypt Project using Transform Streams
 
 To demonstrate the practical application of streams, we will build an encrypt/decrypt project using transform streams. Transform streams allow us to modify data as it passes through the stream pipeline. By leveraging encryption algorithms, we can securely encrypt and decrypt data in real-time, providing a valuable tool for data protection.
