@@ -34,12 +34,16 @@ If you're interested in learning more about the reimplementation of the `event` 
 
 - Follow me on [LinkedIn](https://www.linkedin.com/in/ulugbekhabibov) for updates and news about the project.
 
+- Follow me on [Telegram](https://t.me/+pBD38RkcBI5hZThi) for more insights and discussions on Node.js and engineering topics.
+
 - Check out my articles on [Medium](https://medium.com/@habibovulugbek) (in Uzbek language) for an in-depth analysis of the reimplementation process.
 
 Article links:
 
 - About the buffer. [Buffer haqida bilib olamiz (Nodejs)](https://medium.com/@habibovulugbek/buffer-haqida-bilib-olamiz-nodejs-9e8193c387da)
 - About the streams. [Stream nima? Nodejsda streamlar bilan ishlash.](https://medium.com/@habibovulugbek/stream-nima-nodejsda-ortida-streamlar-qanday-ishlaydi-77256825ec51)
+- Stream benchmarking. [Streamlar bilan benchmarking qilish.](https://medium.com/@habibovulugbek/streamni-benchmark-qilamiz-nodejs-4aa153c614f2)
+- Custom stream implementation. [Custom streamlar yozamiz(Nodejs).](https://habibovulugbek.medium.com/custom-streamlar-yozamiz-nodejs-65eaf08185e7)
 
 I will be sharing more insights and updates on the reimplementation of Node.js modules, so stay tuned for more content.
 
