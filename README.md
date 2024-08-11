@@ -46,3 +46,7 @@ I will be sharing more insights and updates on the reimplementation of Node.js m
 If you have any questions or feedback, feel free to reach out to me on LinkedIn or Medium.
 
 I hope you find these resources helpful in understanding and exploring the reimplementation of these modules. Happy coding!
+
+Developed with ❤️ by Ulug'bek Habibov
+
+Don't forget to ⭐ this repository if you find it helpful!

@@ -34,15 +34,25 @@ Happy coding!
 
 In addition to exploring built-in streams, we will also dive into creating our own custom streams. Custom streams provide flexibility and allow us to tailor the data processing to our specific needs. We will explore both readable and writable custom streams, leveraging the power of Node.js stream APIs.
 
-### Writable Custom Stream
+### Custom Writable Stream
 
 A writable custom stream allows us to define how data is written to a destination. By extending the `Writable` class from the Node.js `stream` module, we can create a custom writable stream that processes data in a specific way. This can be useful for tasks such as logging, data transformation, or writing to a custom data store.
 
 So I have create a custom writable stream which gets a file path and writes the data to that file. You can find the implementation in the `custom-writable-stream` folder.
 
-### Readable Custom Stream
+### Custom Readable Stream
 
 A readable custom stream allows us to define how data is read from a source. By extending the `Readable` class from the Node.js `stream` module, we can create a custom readable stream that generates data in a specific way. This can be useful for tasks such as reading from a custom data source, generating data on-the-fly, or processing data before it is consumed.
+
+So I have create a custom readable stream which gets a file path and reads and logs that. You can find the implementation in the `custom-readable-stream` folder.
+
+### Custom Duplex Stream
+
+A duplex stream combines the functionality of both readable and writable streams, allowing for bidirectional data flow. By extending the `Duplex` class from the Node.js `stream` module, we can create a custom duplex stream that processes data in both directions. This can be useful for tasks such as data transformation, protocol handling, or real-time communication.
+
+So I have create a custom duplex stream which gets a file path and reads and writes the data to other file. You can find the implementation in the `custom-duplex-stream` folder.
+
+By creating custom streams, we can tailor the data processing to our specific needs and build powerful data pipelines that efficiently handle data in Node.js.
 
 ## Encrypt/Decrypt Project using Transform Streams
 
