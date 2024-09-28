@@ -28,6 +28,12 @@ In this repository, I also cover the usage of streams. You can find examples and
 
 Feel free to explore the examples and learn how to leverage streams in your Node.js projects.
 
+## Network with Node.js
+
+In addition to the reimplementation of core modules, I also cover networking with Node.js. You can find examples and explanations on how to create a simple TCP server and client in the [README](./network/README.md) in the `network` folder.
+
+Feel free to explore the examples and learn how to build networking applications with Node.js.
+
 ## Social Media and Articles
 
 If you're interested in learning more about the reimplementation of the `event` and `fs` modules, as well as the usage of `buffer` and `streams`, here are some resources you can explore:
@@ -51,6 +57,6 @@ If you have any questions or feedback, feel free to reach out to me on LinkedIn 
 
 I hope you find these resources helpful in understanding and exploring the reimplementation of these modules. Happy coding!
 
-Developed with ❤️ by Ulug'bek Habibov
+Developed by ❤️ by Ulug'bek Habibov
 
 Don't forget to ⭐ this repository if you find it helpful!
