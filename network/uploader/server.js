@@ -3,19 +3,34 @@ const fs = require("fs/promises");
 
 const server = net.createServer(() => {});
 let fileHandle;
+let fileStream;
 
 server.on("connection", (socket) => {
   console.log("New connection");
 
   socket.on("data", async (data) => {
-    fileHandle = await fs.open("store/result.txt", "w");
-    const fileStream = fileHandle.createWriteStream();
-    fileStream.write(data);
+    if (!fileHandle) {
+      socket.pause(); //to not getting another chunk while opening the file
+      fileHandle = await fs.open("store/result.txt", "w");
+      fileStream = fileHandle.createWriteStream();
+      fileStream.write(data);
+
+      socket.resume(); //continue to resuming data
+      fileStream.on("drain", () => {
+        socket.resume();
+      });
+    } else {
+      if (!fileStream.write(data)) {
+        socket.pause();
+      }
+    }
   });
 
   socket.on("end", () => {
-    console.log("Connection closed");
     fileHandle.close();
+    fileHandle = null;
+    fileStream = null;
+    console.log("Connection closed");
   });
 });
 

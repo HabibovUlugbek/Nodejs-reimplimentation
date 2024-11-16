@@ -8,7 +8,13 @@ const socket = net.createConnection({ host: "::1", port: "4000" }, async () => {
 
   //Reading from source file
   fileStream.on("data", (data) => {
-    socket.write(data);
+    if (!socket.write(data)) {
+      fileStream.pause();
+    }
+  });
+
+  socket.on("drain", () => {
+    fileStream.resume();
   });
 
   fileStream.on("end", () => {
