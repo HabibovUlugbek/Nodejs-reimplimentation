@@ -9,11 +9,13 @@ server.on("connection", (socket) => {
   console.log("New connection");
 
   socket.on("data", async (data) => {
+    //check for name
     if (!fileHandle) {
       socket.pause(); //to not getting another chunk while opening the file
-      fileHandle = await fs.open("store/result.txt", "w");
+      const fileName = checkForFileName(data);
+      fileHandle = await fs.open(`store/${fileName}`, "w");
       fileStream = fileHandle.createWriteStream();
-      fileStream.write(data);
+      // fileStream.write(data);
 
       socket.resume(); //continue to resuming data
       fileStream.on("drain", () => {
@@ -37,3 +39,11 @@ server.on("connection", (socket) => {
 server.listen(4000, "::1", () => {
   console.log("Uploader server running on ", server.address());
 });
+
+function checkForFileName(data) {
+  const { filePath } = JSON.parse(data);
+  const startOfFileName = filePath.lastIndexOf("/");
+  const fileName =
+    startOfFileName > 0 ? filePath.slice(startOfFileName) : filePath;
+  return fileName;
+}
