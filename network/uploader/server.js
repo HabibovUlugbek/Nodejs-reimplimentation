@@ -1,11 +1,12 @@
 const net = require("net");
 const fs = require("fs/promises");
+const path = require("path");
 
 const server = net.createServer(() => {});
-let fileHandle;
-let fileStream;
 
 server.on("connection", (socket) => {
+  let fileHandle;
+  let fileStream;
   console.log("New connection");
 
   socket.on("data", async (data) => {
@@ -42,8 +43,5 @@ server.listen(4000, "::1", () => {
 
 function checkForFileName(data) {
   const { filePath } = JSON.parse(data);
-  const startOfFileName = filePath.lastIndexOf("/");
-  const fileName =
-    startOfFileName > 0 ? filePath.slice(startOfFileName) : filePath;
-  return fileName;
+  return path.basename(filePath);
 }
