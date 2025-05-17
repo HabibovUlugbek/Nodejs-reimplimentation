@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@faker-js/faker": "^9.8.0",
+    "pg": "^8.16.0"
+  }
+}

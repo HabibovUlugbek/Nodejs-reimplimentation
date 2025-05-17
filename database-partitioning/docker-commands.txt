@@ -1,0 +1,3 @@
+docker run --name partition-test -p 20000:5432 -d -e POSTGRES_PASSWORD=postgres  postgres:latest //container yaratish va ishga tushirish
+
+docker exec -it partition-test psql -U postgres //postgresga kirish uchun
