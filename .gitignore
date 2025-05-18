@@ -1,1 +1,6 @@
 */.DS_Store
+# Ignore all .DS_Store files in any directory
+*.log
+# Ignore all .log files in any directory
+*/node_modules
+# Ignore all node_modules directories in any directory

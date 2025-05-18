@@ -37,15 +37,15 @@ async function createPartitions() {
       FOR VALUES FROM (${from}) TO (${to});
     `;
 
-    const indexSQL = `
-      CREATE INDEX IF NOT EXISTS idx_${partitionName}_grade ON ${partitionName} (grade);
-    `;
-
     await client.query(partitionSQL);
-    await client.query(indexSQL);
 
     console.log(`✅ Created partition: ${partitionName} with index on grade`);
   }
+
+  await client.query(`
+    CREATE INDEX IF NOT EXISTS idx_students_parts_grade ON students_parts (grade);
+  `);
+  console.log('✅ Created index on students_parts grade');
 }
 
 async function main() {
