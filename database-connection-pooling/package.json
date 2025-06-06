@@ -1,0 +1,16 @@
+{
+  "name": "database-connection-pooling",
+  "version": "1.0.0",
+  "main": "simple-api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "autocannon": "^8.0.0",
+    "pg": "^8.16.0"
+  }
+}
